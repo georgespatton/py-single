@@ -33,11 +33,13 @@ Invocations:
   single.py -s -c long-running-scrit 
 
 Example: $ single.py -c sleep 3 & for x in {0..6}; do single.py -s -c sleep; sleep 1; done
-[1] 32567
-locked by 32567: /tmp/single.py_bin_sleep.flock
-locked by 32567: /tmp/single.py_bin_sleep.flock
-locked by 32567: /tmp/single.py_bin_sleep.flock
-[1]+  Done                    single.py sleep 5
+[1] 23253
+locked by 23253: /tmp/single.py_bin_sleep.flock
+locked by 23253: /tmp/single.py_bin_sleep.flock
+locked by 23253: /tmp/single.py_bin_sleep.flock
+[1]+  Done                    single.py -c sleep 3
+not locked: /tmp/single.py_bin_sleep.flock
+not locked: /tmp/single.py_bin_sleep.flock
 not locked: /tmp/single.py_bin_sleep.flock
 not locked: /tmp/single.py_bin_sleep.flock
 
